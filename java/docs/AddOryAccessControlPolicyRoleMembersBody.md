@@ -2,7 +2,6 @@
 
 # AddOryAccessControlPolicyRoleMembersBody
 
-AddOryAccessControlPolicyRoleMembersBody AddOryAccessControlPolicyRoleMembersBody add ory access control policy role members body
 ## Properties
 
 Name | Type | Description | Notes

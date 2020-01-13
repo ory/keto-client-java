@@ -27,10 +27,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * AddOryAccessControlPolicyRoleMembersBody AddOryAccessControlPolicyRoleMembersBody add ory access control policy role members body
+ * AddOryAccessControlPolicyRoleMembersBody
  */
-@ApiModel(description = "AddOryAccessControlPolicyRoleMembersBody AddOryAccessControlPolicyRoleMembersBody add ory access control policy role members body")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-13T18:03:34.403700Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-13T18:21:43.803228Z[GMT]")
 public class AddOryAccessControlPolicyRoleMembersBody {
   public static final String SERIALIZED_NAME_MEMBERS = "members";
   @SerializedName(SERIALIZED_NAME_MEMBERS)
