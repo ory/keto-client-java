@@ -31,7 +31,7 @@ import java.util.Map;
  * DoOryAccessControlPoliciesAllowInternalServerErrorBody do ory access control policies allow internal server error body
  */
 @ApiModel(description = "DoOryAccessControlPoliciesAllowInternalServerErrorBody do ory access control policies allow internal server error body")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-13T17:10:01.150045Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-13T18:03:34.403700Z[GMT]")
 public class DoOryAccessControlPoliciesAllowInternalServerErrorBody {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)

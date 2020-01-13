@@ -27,9 +27,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * AddOryAccessControlPolicyRoleMembersBody
+ * AddOryAccessControlPolicyRoleMembersBody AddOryAccessControlPolicyRoleMembersBody add ory access control policy role members body
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-13T17:10:01.150045Z[GMT]")
+@ApiModel(description = "AddOryAccessControlPolicyRoleMembersBody AddOryAccessControlPolicyRoleMembersBody add ory access control policy role members body")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-13T18:03:34.403700Z[GMT]")
 public class AddOryAccessControlPolicyRoleMembersBody {
   public static final String SERIALIZED_NAME_MEMBERS = "members";
   @SerializedName(SERIALIZED_NAME_MEMBERS)
