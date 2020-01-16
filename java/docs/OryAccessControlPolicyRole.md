@@ -2,7 +2,7 @@
 
 # OryAccessControlPolicyRole
 
-OryAccessControlPolicyRole oryAccessControlPolicyRole represents a group of users that share the same role. A role could be an administrator, a moderator, a regular user or some other sort of role.
+oryAccessControlPolicyRole represents a group of users that share the same role. A role could be an administrator, a moderator, a regular user or some other sort of role.
 ## Properties
 
 Name | Type | Description | Notes

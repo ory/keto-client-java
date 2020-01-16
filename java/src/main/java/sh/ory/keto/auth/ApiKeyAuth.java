@@ -18,7 +18,7 @@ import sh.ory.keto.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-13T18:21:43.803228Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-16T09:58:55.261548Z[GMT]")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;
