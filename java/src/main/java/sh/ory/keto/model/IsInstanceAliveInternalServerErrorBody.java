@@ -31,7 +31,7 @@ import java.util.Map;
  * IsInstanceAliveInternalServerErrorBody is instance alive internal server error body
  */
 @ApiModel(description = "IsInstanceAliveInternalServerErrorBody is instance alive internal server error body")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-16T09:58:55.261548Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-23T11:33:30.763370Z[GMT]")
 public class IsInstanceAliveInternalServerErrorBody {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
