@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * OryAccessControlPolicyAllowedInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-23T11:33:30.763370Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-31T17:05:19.380301Z[GMT]")
 public class OryAccessControlPolicyAllowedInput {
   public static final String SERIALIZED_NAME_ACTION = "action";
   @SerializedName(SERIALIZED_NAME_ACTION)

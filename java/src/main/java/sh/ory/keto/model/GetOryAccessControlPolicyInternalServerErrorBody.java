@@ -31,7 +31,7 @@ import java.util.Map;
  * GetOryAccessControlPolicyInternalServerErrorBody get ory access control policy internal server error body
  */
 @ApiModel(description = "GetOryAccessControlPolicyInternalServerErrorBody get ory access control policy internal server error body")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-23T11:33:30.763370Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-01-31T17:05:19.380301Z[GMT]")
 public class GetOryAccessControlPolicyInternalServerErrorBody {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
