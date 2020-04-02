@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * AuthorizationResult
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-04-02T13:44:23.191212Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-04-02T13:51:36.036762Z[GMT]")
 public class AuthorizationResult {
   public static final String SERIALIZED_NAME_ALLOWED = "allowed";
   @SerializedName(SERIALIZED_NAME_ALLOWED)

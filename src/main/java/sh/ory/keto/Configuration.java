@@ -13,7 +13,7 @@
 
 package sh.ory.keto;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-04-02T13:44:23.191212Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-04-02T13:51:36.036762Z[GMT]")
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 
