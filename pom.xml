@@ -5,14 +5,14 @@
     <packaging>jar</packaging>
     <name>keto-client</name>
 
-    <version>0.5.4-alpha.1</version>
+    <version>0.5.4-alpha.1-SNAPSHOT</version>
     <url>https://github.com/ory/keto-client-java</url>
     <description>Java Client for ORY Keto</description>
     <scm>
         <connection>scm:git:git@github.com:ory/keto-client-java.git</connection>
         <developerConnection>scm:git:git@github.com:ory/keto-client-java.git</developerConnection>
         <url>https://github.com/ory/keto-client-java</url>
-      <tag>v0.5.4-alpha.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <licenses>
