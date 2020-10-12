@@ -10,7 +10,7 @@ info:
     name: Apache 2.0
     url: https://github.com/ory/keto/blob/master/LICENSE
   title: ORY Keto
-  version: v0.0.0-alpha.46
+  version: v0.5.7-alpha.1.pre.0
 servers:
 - url: /
 paths:
@@ -54,7 +54,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/inline_response_500'
           description: The standard error format
-      summary: Check if a request is allowed
+      summary: Check If a Request is Allowed
       tags:
       - engines
       x-codegen-request-body-name: Body
@@ -425,7 +425,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/inline_response_500'
           description: The standard error format
-      summary: Add a member to an ORY Access Control Policy Role
+      summary: Add a Member to an ORY Access Control Policy Role
       tags:
       - engines
       x-codegen-request-body-name: Body
@@ -467,7 +467,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/inline_response_500'
           description: The standard error format
-      summary: Remove a member from an ORY Access Control Policy Role
+      summary: Remove a Member From an ORY Access Control Policy Role
       tags:
       - engines
       x-accepts: application/json
@@ -671,8 +671,12 @@ components:
         members:
         - members
         - members
+        description: description
         id: id
       properties:
+        description:
+          description: Description is the description of the role.
+          type: string
         id:
           description: ID is the role's unique id.
           type: string

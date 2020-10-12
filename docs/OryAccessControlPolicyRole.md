@@ -7,6 +7,7 @@ oryAccessControlPolicyRole represents a group of users that share the same role.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**description** | **String** | Description is the description of the role. |  [optional]
 **id** | **String** | ID is the role&#39;s unique id. |  [optional]
 **members** | **List&lt;String&gt;** | Members is who belongs to the role. |  [optional]
 
