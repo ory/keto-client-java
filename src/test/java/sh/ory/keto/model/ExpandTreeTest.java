@@ -21,31 +21,49 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for Version
+ * Model tests for ExpandTree
  */
-public class VersionTest {
-    private final Version model = new Version();
+public class ExpandTreeTest {
+    private final ExpandTree model = new ExpandTree();
 
     /**
-     * Model tests for Version
+     * Model tests for ExpandTree
      */
     @Test
-    public void testVersion() {
-        // TODO: test Version
+    public void testExpandTree() {
+        // TODO: test ExpandTree
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'children'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void childrenTest() {
+        // TODO: test children
+    }
+
+    /**
+     * Test the property 'subject'
+     */
+    @Test
+    public void subjectTest() {
+        // TODO: test subject
+    }
+
+    /**
+     * Test the property 'type'
+     */
+    @Test
+    public void typeTest() {
+        // TODO: test type
     }
 
 }

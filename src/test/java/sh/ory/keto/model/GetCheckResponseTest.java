@@ -27,25 +27,25 @@ import org.junit.Test;
 
 
 /**
- * Model tests for Version
+ * Model tests for GetCheckResponse
  */
-public class VersionTest {
-    private final Version model = new Version();
+public class GetCheckResponseTest {
+    private final GetCheckResponse model = new GetCheckResponse();
 
     /**
-     * Model tests for Version
+     * Model tests for GetCheckResponse
      */
     @Test
-    public void testVersion() {
-        // TODO: test Version
+    public void testGetCheckResponse() {
+        // TODO: test GetCheckResponse
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'allowed'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void allowedTest() {
+        // TODO: test allowed
     }
 
 }

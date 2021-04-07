@@ -21,31 +21,40 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import sh.ory.keto.model.InternalRelationTuple;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for Version
+ * Model tests for PatchDelta
  */
-public class VersionTest {
-    private final Version model = new Version();
+public class PatchDeltaTest {
+    private final PatchDelta model = new PatchDelta();
 
     /**
-     * Model tests for Version
+     * Model tests for PatchDelta
      */
     @Test
-    public void testVersion() {
-        // TODO: test Version
+    public void testPatchDelta() {
+        // TODO: test PatchDelta
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'action'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void actionTest() {
+        // TODO: test action
+    }
+
+    /**
+     * Test the property 'relationTuple'
+     */
+    @Test
+    public void relationTupleTest() {
+        // TODO: test relationTuple
     }
 
 }

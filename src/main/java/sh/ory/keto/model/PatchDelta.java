@@ -23,37 +23,65 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import sh.ory.keto.model.InternalRelationTuple;
 
 /**
- * Version
+ * PatchDelta
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-04-07T17:52:09.440238193Z[Etc/UTC]")
-public class Version {
-  public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION)
-  private String version;
+public class PatchDelta {
+  public static final String SERIALIZED_NAME_ACTION = "action";
+  @SerializedName(SERIALIZED_NAME_ACTION)
+  private String action;
+
+  public static final String SERIALIZED_NAME_RELATION_TUPLE = "relation_tuple";
+  @SerializedName(SERIALIZED_NAME_RELATION_TUPLE)
+  private InternalRelationTuple relationTuple;
 
 
-  public Version version(String version) {
+  public PatchDelta action(String action) {
     
-    this.version = version;
+    this.action = action;
     return this;
   }
 
    /**
-   * Version is the service&#39;s version.
-   * @return version
+   * Get action
+   * @return action
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Version is the service's version.")
+  @ApiModelProperty(value = "")
 
-  public String getVersion() {
-    return version;
+  public String getAction() {
+    return action;
   }
 
 
-  public void setVersion(String version) {
-    this.version = version;
+  public void setAction(String action) {
+    this.action = action;
+  }
+
+
+  public PatchDelta relationTuple(InternalRelationTuple relationTuple) {
+    
+    this.relationTuple = relationTuple;
+    return this;
+  }
+
+   /**
+   * Get relationTuple
+   * @return relationTuple
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public InternalRelationTuple getRelationTuple() {
+    return relationTuple;
+  }
+
+
+  public void setRelationTuple(InternalRelationTuple relationTuple) {
+    this.relationTuple = relationTuple;
   }
 
 
@@ -65,21 +93,23 @@ public class Version {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Version version = (Version) o;
-    return Objects.equals(this.version, version.version);
+    PatchDelta patchDelta = (PatchDelta) o;
+    return Objects.equals(this.action, patchDelta.action) &&
+        Objects.equals(this.relationTuple, patchDelta.relationTuple);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(version);
+    return Objects.hash(action, relationTuple);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Version {\n");
-    sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    sb.append("class PatchDelta {\n");
+    sb.append("    action: ").append(toIndentedString(action)).append("\n");
+    sb.append("    relationTuple: ").append(toIndentedString(relationTuple)).append("\n");
     sb.append("}");
     return sb.toString();
   }

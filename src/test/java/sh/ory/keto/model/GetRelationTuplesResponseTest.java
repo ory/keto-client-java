@@ -21,31 +21,42 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import sh.ory.keto.model.InternalRelationTuple;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for Version
+ * Model tests for GetRelationTuplesResponse
  */
-public class VersionTest {
-    private final Version model = new Version();
+public class GetRelationTuplesResponseTest {
+    private final GetRelationTuplesResponse model = new GetRelationTuplesResponse();
 
     /**
-     * Model tests for Version
+     * Model tests for GetRelationTuplesResponse
      */
     @Test
-    public void testVersion() {
-        // TODO: test Version
+    public void testGetRelationTuplesResponse() {
+        // TODO: test GetRelationTuplesResponse
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'nextPageToken'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void nextPageTokenTest() {
+        // TODO: test nextPageToken
+    }
+
+    /**
+     * Test the property 'relationTuples'
+     */
+    @Test
+    public void relationTuplesTest() {
+        // TODO: test relationTuples
     }
 
 }

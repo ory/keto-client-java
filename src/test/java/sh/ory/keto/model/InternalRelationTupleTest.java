@@ -27,25 +27,49 @@ import org.junit.Test;
 
 
 /**
- * Model tests for Version
+ * Model tests for InternalRelationTuple
  */
-public class VersionTest {
-    private final Version model = new Version();
+public class InternalRelationTupleTest {
+    private final InternalRelationTuple model = new InternalRelationTuple();
 
     /**
-     * Model tests for Version
+     * Model tests for InternalRelationTuple
      */
     @Test
-    public void testVersion() {
-        // TODO: test Version
+    public void testInternalRelationTuple() {
+        // TODO: test InternalRelationTuple
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'namespace'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void namespaceTest() {
+        // TODO: test namespace
+    }
+
+    /**
+     * Test the property '_object'
+     */
+    @Test
+    public void _objectTest() {
+        // TODO: test _object
+    }
+
+    /**
+     * Test the property 'relation'
+     */
+    @Test
+    public void relationTest() {
+        // TODO: test relation
+    }
+
+    /**
+     * Test the property 'subject'
+     */
+    @Test
+    public void subjectTest() {
+        // TODO: test subject
     }
 
 }

@@ -21,23 +21,65 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for HealthStatus
+ * Model tests for InlineResponse400
  */
-public class HealthStatusTest {
-    private final HealthStatus model = new HealthStatus();
+public class InlineResponse400Test {
+    private final InlineResponse400 model = new InlineResponse400();
 
     /**
-     * Model tests for HealthStatus
+     * Model tests for InlineResponse400
      */
     @Test
-    public void testHealthStatus() {
-        // TODO: test HealthStatus
+    public void testInlineResponse400() {
+        // TODO: test InlineResponse400
+    }
+
+    /**
+     * Test the property 'code'
+     */
+    @Test
+    public void codeTest() {
+        // TODO: test code
+    }
+
+    /**
+     * Test the property 'details'
+     */
+    @Test
+    public void detailsTest() {
+        // TODO: test details
+    }
+
+    /**
+     * Test the property 'message'
+     */
+    @Test
+    public void messageTest() {
+        // TODO: test message
+    }
+
+    /**
+     * Test the property 'reason'
+     */
+    @Test
+    public void reasonTest() {
+        // TODO: test reason
+    }
+
+    /**
+     * Test the property 'request'
+     */
+    @Test
+    public void requestTest() {
+        // TODO: test request
     }
 
     /**

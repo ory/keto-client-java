@@ -25,35 +25,35 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Version
+ * The content of the allowed field is mirrored in the HTTP status code.
  */
+@ApiModel(description = "The content of the allowed field is mirrored in the HTTP status code.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-04-07T17:52:09.440238193Z[Etc/UTC]")
-public class Version {
-  public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION)
-  private String version;
+public class GetCheckResponse {
+  public static final String SERIALIZED_NAME_ALLOWED = "allowed";
+  @SerializedName(SERIALIZED_NAME_ALLOWED)
+  private Boolean allowed;
 
 
-  public Version version(String version) {
+  public GetCheckResponse allowed(Boolean allowed) {
     
-    this.version = version;
+    this.allowed = allowed;
     return this;
   }
 
    /**
-   * Version is the service&#39;s version.
-   * @return version
+   * whether the relation tuple is allowed
+   * @return allowed
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Version is the service's version.")
+  @ApiModelProperty(required = true, value = "whether the relation tuple is allowed")
 
-  public String getVersion() {
-    return version;
+  public Boolean getAllowed() {
+    return allowed;
   }
 
 
-  public void setVersion(String version) {
-    this.version = version;
+  public void setAllowed(Boolean allowed) {
+    this.allowed = allowed;
   }
 
 
@@ -65,21 +65,21 @@ public class Version {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Version version = (Version) o;
-    return Objects.equals(this.version, version.version);
+    GetCheckResponse getCheckResponse = (GetCheckResponse) o;
+    return Objects.equals(this.allowed, getCheckResponse.allowed);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(version);
+    return Objects.hash(allowed);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Version {\n");
-    sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    sb.append("class GetCheckResponse {\n");
+    sb.append("    allowed: ").append(toIndentedString(allowed)).append("\n");
     sb.append("}");
     return sb.toString();
   }
