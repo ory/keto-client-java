@@ -10,7 +10,7 @@ info:
     name: Apache 2.0
     url: https://github.com/ory/keto/blob/master/LICENSE
   title: ORY Keto
-  version: v0.6.0-alpha.1
+  version: v0.6.0-alpha.6
 servers:
 - url: /
 paths:
@@ -435,9 +435,6 @@ paths:
       x-accepts: application/json
 components:
   schemas:
-    UUID:
-      format: uuid4
-      type: string
     InternalRelationTuple:
       example:
         subject: subject
@@ -576,6 +573,9 @@ components:
           description: Version is the service's version.
           type: string
       type: object
+    UUID:
+      format: uuid4
+      type: string
     inline_response_400:
       properties:
         code:
