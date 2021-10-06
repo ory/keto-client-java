@@ -26,10 +26,10 @@ import java.io.IOException;
 import sh.ory.keto.model.SubjectSet;
 
 /**
- * InternalRelationTuple
+ * RelationQuery
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-06T15:44:01.609146918Z[Etc/UTC]")
-public class InternalRelationTuple {
+public class RelationQuery {
   public static final String SERIALIZED_NAME_NAMESPACE = "namespace";
   @SerializedName(SERIALIZED_NAME_NAMESPACE)
   private String namespace;
@@ -51,7 +51,7 @@ public class InternalRelationTuple {
   private SubjectSet subjectSet;
 
 
-  public InternalRelationTuple namespace(String namespace) {
+  public RelationQuery namespace(String namespace) {
     
     this.namespace = namespace;
     return this;
@@ -74,7 +74,7 @@ public class InternalRelationTuple {
   }
 
 
-  public InternalRelationTuple _object(String _object) {
+  public RelationQuery _object(String _object) {
     
     this._object = _object;
     return this;
@@ -84,8 +84,8 @@ public class InternalRelationTuple {
    * Object of the Relation Tuple
    * @return _object
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Object of the Relation Tuple")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Object of the Relation Tuple")
 
   public String getObject() {
     return _object;
@@ -97,7 +97,7 @@ public class InternalRelationTuple {
   }
 
 
-  public InternalRelationTuple relation(String relation) {
+  public RelationQuery relation(String relation) {
     
     this.relation = relation;
     return this;
@@ -107,8 +107,8 @@ public class InternalRelationTuple {
    * Relation of the Relation Tuple
    * @return relation
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Relation of the Relation Tuple")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Relation of the Relation Tuple")
 
   public String getRelation() {
     return relation;
@@ -120,18 +120,18 @@ public class InternalRelationTuple {
   }
 
 
-  public InternalRelationTuple subjectId(String subjectId) {
+  public RelationQuery subjectId(String subjectId) {
     
     this.subjectId = subjectId;
     return this;
   }
 
    /**
-   * SubjectID of the Relation Tuple  Either SubjectSet or SubjectID are required.
+   * SubjectID of the Relation Tuple  Either SubjectSet or SubjectID can be provided.
    * @return subjectId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "SubjectID of the Relation Tuple  Either SubjectSet or SubjectID are required.")
+  @ApiModelProperty(value = "SubjectID of the Relation Tuple  Either SubjectSet or SubjectID can be provided.")
 
   public String getSubjectId() {
     return subjectId;
@@ -143,7 +143,7 @@ public class InternalRelationTuple {
   }
 
 
-  public InternalRelationTuple subjectSet(SubjectSet subjectSet) {
+  public RelationQuery subjectSet(SubjectSet subjectSet) {
     
     this.subjectSet = subjectSet;
     return this;
@@ -174,12 +174,12 @@ public class InternalRelationTuple {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InternalRelationTuple internalRelationTuple = (InternalRelationTuple) o;
-    return Objects.equals(this.namespace, internalRelationTuple.namespace) &&
-        Objects.equals(this._object, internalRelationTuple._object) &&
-        Objects.equals(this.relation, internalRelationTuple.relation) &&
-        Objects.equals(this.subjectId, internalRelationTuple.subjectId) &&
-        Objects.equals(this.subjectSet, internalRelationTuple.subjectSet);
+    RelationQuery relationQuery = (RelationQuery) o;
+    return Objects.equals(this.namespace, relationQuery.namespace) &&
+        Objects.equals(this._object, relationQuery._object) &&
+        Objects.equals(this.relation, relationQuery.relation) &&
+        Objects.equals(this.subjectId, relationQuery.subjectId) &&
+        Objects.equals(this.subjectSet, relationQuery.subjectSet);
   }
 
   @Override
@@ -190,7 +190,7 @@ public class InternalRelationTuple {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InternalRelationTuple {\n");
+    sb.append("class RelationQuery {\n");
     sb.append("    namespace: ").append(toIndentedString(namespace)).append("\n");
     sb.append("    _object: ").append(toIndentedString(_object)).append("\n");
     sb.append("    relation: ").append(toIndentedString(relation)).append("\n");

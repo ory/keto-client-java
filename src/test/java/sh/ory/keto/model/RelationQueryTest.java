@@ -28,17 +28,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for InternalRelationTuple
+ * Model tests for RelationQuery
  */
-public class InternalRelationTupleTest {
-    private final InternalRelationTuple model = new InternalRelationTuple();
+public class RelationQueryTest {
+    private final RelationQuery model = new RelationQuery();
 
     /**
-     * Model tests for InternalRelationTuple
+     * Model tests for RelationQuery
      */
     @Test
-    public void testInternalRelationTuple() {
-        // TODO: test InternalRelationTuple
+    public void testRelationQuery() {
+        // TODO: test RelationQuery
     }
 
     /**

@@ -23,13 +23,12 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import sh.ory.keto.model.SubjectSet;
 
 /**
- * InternalRelationTuple
+ * SubjectSet
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-06T15:44:01.609146918Z[Etc/UTC]")
-public class InternalRelationTuple {
+public class SubjectSet {
   public static final String SERIALIZED_NAME_NAMESPACE = "namespace";
   @SerializedName(SERIALIZED_NAME_NAMESPACE)
   private String namespace;
@@ -42,27 +41,19 @@ public class InternalRelationTuple {
   @SerializedName(SERIALIZED_NAME_RELATION)
   private String relation;
 
-  public static final String SERIALIZED_NAME_SUBJECT_ID = "subject_id";
-  @SerializedName(SERIALIZED_NAME_SUBJECT_ID)
-  private String subjectId;
 
-  public static final String SERIALIZED_NAME_SUBJECT_SET = "subject_set";
-  @SerializedName(SERIALIZED_NAME_SUBJECT_SET)
-  private SubjectSet subjectSet;
-
-
-  public InternalRelationTuple namespace(String namespace) {
+  public SubjectSet namespace(String namespace) {
     
     this.namespace = namespace;
     return this;
   }
 
    /**
-   * Namespace of the Relation Tuple
+   * Namespace of the Subject Set
    * @return namespace
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Namespace of the Relation Tuple")
+  @ApiModelProperty(required = true, value = "Namespace of the Subject Set")
 
   public String getNamespace() {
     return namespace;
@@ -74,18 +65,18 @@ public class InternalRelationTuple {
   }
 
 
-  public InternalRelationTuple _object(String _object) {
+  public SubjectSet _object(String _object) {
     
     this._object = _object;
     return this;
   }
 
    /**
-   * Object of the Relation Tuple
+   * Object of the Subject Set
    * @return _object
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Object of the Relation Tuple")
+  @ApiModelProperty(required = true, value = "Object of the Subject Set")
 
   public String getObject() {
     return _object;
@@ -97,18 +88,18 @@ public class InternalRelationTuple {
   }
 
 
-  public InternalRelationTuple relation(String relation) {
+  public SubjectSet relation(String relation) {
     
     this.relation = relation;
     return this;
   }
 
    /**
-   * Relation of the Relation Tuple
+   * Relation of the Subject Set
    * @return relation
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Relation of the Relation Tuple")
+  @ApiModelProperty(required = true, value = "Relation of the Subject Set")
 
   public String getRelation() {
     return relation;
@@ -120,52 +111,6 @@ public class InternalRelationTuple {
   }
 
 
-  public InternalRelationTuple subjectId(String subjectId) {
-    
-    this.subjectId = subjectId;
-    return this;
-  }
-
-   /**
-   * SubjectID of the Relation Tuple  Either SubjectSet or SubjectID are required.
-   * @return subjectId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "SubjectID of the Relation Tuple  Either SubjectSet or SubjectID are required.")
-
-  public String getSubjectId() {
-    return subjectId;
-  }
-
-
-  public void setSubjectId(String subjectId) {
-    this.subjectId = subjectId;
-  }
-
-
-  public InternalRelationTuple subjectSet(SubjectSet subjectSet) {
-    
-    this.subjectSet = subjectSet;
-    return this;
-  }
-
-   /**
-   * Get subjectSet
-   * @return subjectSet
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public SubjectSet getSubjectSet() {
-    return subjectSet;
-  }
-
-
-  public void setSubjectSet(SubjectSet subjectSet) {
-    this.subjectSet = subjectSet;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -174,28 +119,24 @@ public class InternalRelationTuple {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InternalRelationTuple internalRelationTuple = (InternalRelationTuple) o;
-    return Objects.equals(this.namespace, internalRelationTuple.namespace) &&
-        Objects.equals(this._object, internalRelationTuple._object) &&
-        Objects.equals(this.relation, internalRelationTuple.relation) &&
-        Objects.equals(this.subjectId, internalRelationTuple.subjectId) &&
-        Objects.equals(this.subjectSet, internalRelationTuple.subjectSet);
+    SubjectSet subjectSet = (SubjectSet) o;
+    return Objects.equals(this.namespace, subjectSet.namespace) &&
+        Objects.equals(this._object, subjectSet._object) &&
+        Objects.equals(this.relation, subjectSet.relation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(namespace, _object, relation, subjectId, subjectSet);
+    return Objects.hash(namespace, _object, relation);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InternalRelationTuple {\n");
+    sb.append("class SubjectSet {\n");
     sb.append("    namespace: ").append(toIndentedString(namespace)).append("\n");
     sb.append("    _object: ").append(toIndentedString(_object)).append("\n");
     sb.append("    relation: ").append(toIndentedString(relation)).append("\n");
-    sb.append("    subjectId: ").append(toIndentedString(subjectId)).append("\n");
-    sb.append("    subjectSet: ").append(toIndentedString(subjectSet)).append("\n");
     sb.append("}");
     return sb.toString();
   }

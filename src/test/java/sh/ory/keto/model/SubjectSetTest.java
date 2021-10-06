@@ -21,24 +21,23 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import sh.ory.keto.model.SubjectSet;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for InternalRelationTuple
+ * Model tests for SubjectSet
  */
-public class InternalRelationTupleTest {
-    private final InternalRelationTuple model = new InternalRelationTuple();
+public class SubjectSetTest {
+    private final SubjectSet model = new SubjectSet();
 
     /**
-     * Model tests for InternalRelationTuple
+     * Model tests for SubjectSet
      */
     @Test
-    public void testInternalRelationTuple() {
-        // TODO: test InternalRelationTuple
+    public void testSubjectSet() {
+        // TODO: test SubjectSet
     }
 
     /**
@@ -63,22 +62,6 @@ public class InternalRelationTupleTest {
     @Test
     public void relationTest() {
         // TODO: test relation
-    }
-
-    /**
-     * Test the property 'subjectId'
-     */
-    @Test
-    public void subjectIdTest() {
-        // TODO: test subjectId
-    }
-
-    /**
-     * Test the property 'subjectSet'
-     */
-    @Test
-    public void subjectSetTest() {
-        // TODO: test subjectSet
     }
 
 }
