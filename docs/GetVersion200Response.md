@@ -1,13 +1,13 @@
 
 
-# HealthStatus
+# GetVersion200Response
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**status** | **String** | Status always contains \&quot;ok\&quot;. |  [optional] |
+|**version** | **String** | The version of Ory Keto. |  |
 
 
 

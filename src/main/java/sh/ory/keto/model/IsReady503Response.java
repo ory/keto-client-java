@@ -48,27 +48,24 @@ import java.util.Set;
 import sh.ory.keto.JSON;
 
 /**
- * HealthNotReadyStatus
+ * IsReady503Response
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-27T13:43:10.921931843Z[Etc/UTC]")
-public class HealthNotReadyStatus {
+public class IsReady503Response {
   public static final String SERIALIZED_NAME_ERRORS = "errors";
   @SerializedName(SERIALIZED_NAME_ERRORS)
-  private Map<String, String> errors = null;
+  private Map<String, String> errors = new HashMap<>();
 
-  public HealthNotReadyStatus() { 
+  public IsReady503Response() { 
   }
 
-  public HealthNotReadyStatus errors(Map<String, String> errors) {
+  public IsReady503Response errors(Map<String, String> errors) {
     
     this.errors = errors;
     return this;
   }
 
-  public HealthNotReadyStatus putErrorsItem(String key, String errorsItem) {
-    if (this.errors == null) {
-      this.errors = new HashMap<>();
-    }
+  public IsReady503Response putErrorsItem(String key, String errorsItem) {
     this.errors.put(key, errorsItem);
     return this;
   }
@@ -77,8 +74,8 @@ public class HealthNotReadyStatus {
    * Errors contains a list of errors that caused the not ready status.
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Errors contains a list of errors that caused the not ready status.")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Errors contains a list of errors that caused the not ready status.")
 
   public Map<String, String> getErrors() {
     return errors;
@@ -99,8 +96,8 @@ public class HealthNotReadyStatus {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    HealthNotReadyStatus healthNotReadyStatus = (HealthNotReadyStatus) o;
-    return Objects.equals(this.errors, healthNotReadyStatus.errors);
+    IsReady503Response isReady503Response = (IsReady503Response) o;
+    return Objects.equals(this.errors, isReady503Response.errors);
   }
 
   @Override
@@ -111,7 +108,7 @@ public class HealthNotReadyStatus {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class HealthNotReadyStatus {\n");
+    sb.append("class IsReady503Response {\n");
     sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -139,28 +136,36 @@ public class HealthNotReadyStatus {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("errors");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to HealthNotReadyStatus
+  * @throws IOException if the JSON Object is invalid with respect to IsReady503Response
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (HealthNotReadyStatus.openapiRequiredFields.isEmpty()) {
+        if (IsReady503Response.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in HealthNotReadyStatus is not found in the empty JSON string", HealthNotReadyStatus.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in IsReady503Response is not found in the empty JSON string", IsReady503Response.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!HealthNotReadyStatus.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `HealthNotReadyStatus` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!IsReady503Response.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `IsReady503Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : IsReady503Response.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
   }
@@ -169,22 +174,22 @@ public class HealthNotReadyStatus {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!HealthNotReadyStatus.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'HealthNotReadyStatus' and its subtypes
+       if (!IsReady503Response.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'IsReady503Response' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<HealthNotReadyStatus> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(HealthNotReadyStatus.class));
+       final TypeAdapter<IsReady503Response> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(IsReady503Response.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<HealthNotReadyStatus>() {
+       return (TypeAdapter<T>) new TypeAdapter<IsReady503Response>() {
            @Override
-           public void write(JsonWriter out, HealthNotReadyStatus value) throws IOException {
+           public void write(JsonWriter out, IsReady503Response value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public HealthNotReadyStatus read(JsonReader in) throws IOException {
+           public IsReady503Response read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -195,18 +200,18 @@ public class HealthNotReadyStatus {
   }
 
  /**
-  * Create an instance of HealthNotReadyStatus given an JSON string
+  * Create an instance of IsReady503Response given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of HealthNotReadyStatus
-  * @throws IOException if the JSON string is invalid with respect to HealthNotReadyStatus
+  * @return An instance of IsReady503Response
+  * @throws IOException if the JSON string is invalid with respect to IsReady503Response
   */
-  public static HealthNotReadyStatus fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, HealthNotReadyStatus.class);
+  public static IsReady503Response fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, IsReady503Response.class);
   }
 
  /**
-  * Convert an instance of HealthNotReadyStatus to an JSON string
+  * Convert an instance of IsReady503Response to an JSON string
   *
   * @return JSON string
   */

@@ -23,9 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,45 +45,37 @@ import java.util.Set;
 import sh.ory.keto.JSON;
 
 /**
- * HealthNotReadyStatus
+ * IsAlive200Response
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-27T13:43:10.921931843Z[Etc/UTC]")
-public class HealthNotReadyStatus {
-  public static final String SERIALIZED_NAME_ERRORS = "errors";
-  @SerializedName(SERIALIZED_NAME_ERRORS)
-  private Map<String, String> errors = null;
+public class IsAlive200Response {
+  public static final String SERIALIZED_NAME_STATUS = "status";
+  @SerializedName(SERIALIZED_NAME_STATUS)
+  private String status;
 
-  public HealthNotReadyStatus() { 
+  public IsAlive200Response() { 
   }
 
-  public HealthNotReadyStatus errors(Map<String, String> errors) {
+  public IsAlive200Response status(String status) {
     
-    this.errors = errors;
-    return this;
-  }
-
-  public HealthNotReadyStatus putErrorsItem(String key, String errorsItem) {
-    if (this.errors == null) {
-      this.errors = new HashMap<>();
-    }
-    this.errors.put(key, errorsItem);
+    this.status = status;
     return this;
   }
 
    /**
-   * Errors contains a list of errors that caused the not ready status.
-   * @return errors
+   * Always \&quot;ok\&quot;.
+   * @return status
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Errors contains a list of errors that caused the not ready status.")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Always \"ok\".")
 
-  public Map<String, String> getErrors() {
-    return errors;
+  public String getStatus() {
+    return status;
   }
 
 
-  public void setErrors(Map<String, String> errors) {
-    this.errors = errors;
+  public void setStatus(String status) {
+    this.status = status;
   }
 
 
@@ -99,20 +88,20 @@ public class HealthNotReadyStatus {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    HealthNotReadyStatus healthNotReadyStatus = (HealthNotReadyStatus) o;
-    return Objects.equals(this.errors, healthNotReadyStatus.errors);
+    IsAlive200Response isAlive200Response = (IsAlive200Response) o;
+    return Objects.equals(this.status, isAlive200Response.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errors);
+    return Objects.hash(status);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class HealthNotReadyStatus {\n");
-    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("class IsAlive200Response {\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -135,33 +124,44 @@ public class HealthNotReadyStatus {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("errors");
+    openapiFields.add("status");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("status");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to HealthNotReadyStatus
+  * @throws IOException if the JSON Object is invalid with respect to IsAlive200Response
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (HealthNotReadyStatus.openapiRequiredFields.isEmpty()) {
+        if (IsAlive200Response.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in HealthNotReadyStatus is not found in the empty JSON string", HealthNotReadyStatus.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in IsAlive200Response is not found in the empty JSON string", IsAlive200Response.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!HealthNotReadyStatus.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `HealthNotReadyStatus` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!IsAlive200Response.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `IsAlive200Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : IsAlive200Response.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
   }
 
@@ -169,22 +169,22 @@ public class HealthNotReadyStatus {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!HealthNotReadyStatus.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'HealthNotReadyStatus' and its subtypes
+       if (!IsAlive200Response.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'IsAlive200Response' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<HealthNotReadyStatus> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(HealthNotReadyStatus.class));
+       final TypeAdapter<IsAlive200Response> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(IsAlive200Response.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<HealthNotReadyStatus>() {
+       return (TypeAdapter<T>) new TypeAdapter<IsAlive200Response>() {
            @Override
-           public void write(JsonWriter out, HealthNotReadyStatus value) throws IOException {
+           public void write(JsonWriter out, IsAlive200Response value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public HealthNotReadyStatus read(JsonReader in) throws IOException {
+           public IsAlive200Response read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -195,18 +195,18 @@ public class HealthNotReadyStatus {
   }
 
  /**
-  * Create an instance of HealthNotReadyStatus given an JSON string
+  * Create an instance of IsAlive200Response given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of HealthNotReadyStatus
-  * @throws IOException if the JSON string is invalid with respect to HealthNotReadyStatus
+  * @return An instance of IsAlive200Response
+  * @throws IOException if the JSON string is invalid with respect to IsAlive200Response
   */
-  public static HealthNotReadyStatus fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, HealthNotReadyStatus.class);
+  public static IsAlive200Response fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, IsAlive200Response.class);
   }
 
  /**
-  * Convert an instance of HealthNotReadyStatus to an JSON string
+  * Convert an instance of IsAlive200Response to an JSON string
   *
   * @return JSON string
   */
