@@ -20,7 +20,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import sh.ory.keto.model.Relationship;
 
 import com.google.gson.Gson;
@@ -48,108 +50,41 @@ import java.util.Set;
 import sh.ory.keto.JSON;
 
 /**
- * Payload for patching a relationship
+ * Batch Check Permission Body
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-09T17:31:55.351267584Z[Etc/UTC]", comments = "Generator version: 7.7.0")
-public class RelationshipPatch {
-  /**
-   * Gets or Sets action
-   */
-  @JsonAdapter(ActionEnum.Adapter.class)
-  public enum ActionEnum {
-    INSERT("insert"),
-    
-    DELETE("delete");
+public class BatchCheckPermissionBody {
+  public static final String SERIALIZED_NAME_TUPLES = "tuples";
+  @SerializedName(SERIALIZED_NAME_TUPLES)
+  private List<Relationship> tuples = new ArrayList<>();
 
-    private String value;
-
-    ActionEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static ActionEnum fromValue(String value) {
-      for (ActionEnum b : ActionEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<ActionEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final ActionEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public ActionEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return ActionEnum.fromValue(value);
-      }
-    }
-
-    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      String value = jsonElement.getAsString();
-      ActionEnum.fromValue(value);
-    }
+  public BatchCheckPermissionBody() {
   }
 
-  public static final String SERIALIZED_NAME_ACTION = "action";
-  @SerializedName(SERIALIZED_NAME_ACTION)
-  private ActionEnum action;
-
-  public static final String SERIALIZED_NAME_RELATION_TUPLE = "relation_tuple";
-  @SerializedName(SERIALIZED_NAME_RELATION_TUPLE)
-  private Relationship relationTuple;
-
-  public RelationshipPatch() {
+  public BatchCheckPermissionBody tuples(List<Relationship> tuples) {
+    this.tuples = tuples;
+    return this;
   }
 
-  public RelationshipPatch action(ActionEnum action) {
-    this.action = action;
+  public BatchCheckPermissionBody addTuplesItem(Relationship tuplesItem) {
+    if (this.tuples == null) {
+      this.tuples = new ArrayList<>();
+    }
+    this.tuples.add(tuplesItem);
     return this;
   }
 
   /**
-   * Get action
-   * @return action
+   * Get tuples
+   * @return tuples
    */
   @javax.annotation.Nullable
-  public ActionEnum getAction() {
-    return action;
+  public List<Relationship> getTuples() {
+    return tuples;
   }
 
-  public void setAction(ActionEnum action) {
-    this.action = action;
-  }
-
-
-  public RelationshipPatch relationTuple(Relationship relationTuple) {
-    this.relationTuple = relationTuple;
-    return this;
-  }
-
-  /**
-   * Get relationTuple
-   * @return relationTuple
-   */
-  @javax.annotation.Nullable
-  public Relationship getRelationTuple() {
-    return relationTuple;
-  }
-
-  public void setRelationTuple(Relationship relationTuple) {
-    this.relationTuple = relationTuple;
+  public void setTuples(List<Relationship> tuples) {
+    this.tuples = tuples;
   }
 
   /**
@@ -165,9 +100,9 @@ public class RelationshipPatch {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the RelationshipPatch instance itself
+   * @return the BatchCheckPermissionBody instance itself
    */
-  public RelationshipPatch putAdditionalProperty(String key, Object value) {
+  public BatchCheckPermissionBody putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -206,23 +141,21 @@ public class RelationshipPatch {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RelationshipPatch relationshipPatch = (RelationshipPatch) o;
-    return Objects.equals(this.action, relationshipPatch.action) &&
-        Objects.equals(this.relationTuple, relationshipPatch.relationTuple)&&
-        Objects.equals(this.additionalProperties, relationshipPatch.additionalProperties);
+    BatchCheckPermissionBody batchCheckPermissionBody = (BatchCheckPermissionBody) o;
+    return Objects.equals(this.tuples, batchCheckPermissionBody.tuples)&&
+        Objects.equals(this.additionalProperties, batchCheckPermissionBody.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, relationTuple, additionalProperties);
+    return Objects.hash(tuples, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RelationshipPatch {\n");
-    sb.append("    action: ").append(toIndentedString(action)).append("\n");
-    sb.append("    relationTuple: ").append(toIndentedString(relationTuple)).append("\n");
+    sb.append("class BatchCheckPermissionBody {\n");
+    sb.append("    tuples: ").append(toIndentedString(tuples)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -246,8 +179,7 @@ public class RelationshipPatch {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("action");
-    openapiFields.add("relation_tuple");
+    openapiFields.add("tuples");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -257,25 +189,28 @@ public class RelationshipPatch {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to RelationshipPatch
+   * @throws IOException if the JSON Element is invalid with respect to BatchCheckPermissionBody
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!RelationshipPatch.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RelationshipPatch is not found in the empty JSON string", RelationshipPatch.openapiRequiredFields.toString()));
+        if (!BatchCheckPermissionBody.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in BatchCheckPermissionBody is not found in the empty JSON string", BatchCheckPermissionBody.openapiRequiredFields.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("action") != null && !jsonObj.get("action").isJsonNull()) && !jsonObj.get("action").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `action` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action").toString()));
-      }
-      // validate the optional field `action`
-      if (jsonObj.get("action") != null && !jsonObj.get("action").isJsonNull()) {
-        ActionEnum.validateJsonElement(jsonObj.get("action"));
-      }
-      // validate the optional field `relation_tuple`
-      if (jsonObj.get("relation_tuple") != null && !jsonObj.get("relation_tuple").isJsonNull()) {
-        Relationship.validateJsonElement(jsonObj.get("relation_tuple"));
+      if (jsonObj.get("tuples") != null && !jsonObj.get("tuples").isJsonNull()) {
+        JsonArray jsonArraytuples = jsonObj.getAsJsonArray("tuples");
+        if (jsonArraytuples != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("tuples").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `tuples` to be an array in the JSON string but got `%s`", jsonObj.get("tuples").toString()));
+          }
+
+          // validate the optional field `tuples` (array)
+          for (int i = 0; i < jsonArraytuples.size(); i++) {
+            Relationship.validateJsonElement(jsonArraytuples.get(i));
+          };
+        }
       }
   }
 
@@ -283,16 +218,16 @@ public class RelationshipPatch {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RelationshipPatch.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RelationshipPatch' and its subtypes
+       if (!BatchCheckPermissionBody.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'BatchCheckPermissionBody' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RelationshipPatch> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RelationshipPatch.class));
+       final TypeAdapter<BatchCheckPermissionBody> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(BatchCheckPermissionBody.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<RelationshipPatch>() {
+       return (TypeAdapter<T>) new TypeAdapter<BatchCheckPermissionBody>() {
            @Override
-           public void write(JsonWriter out, RelationshipPatch value) throws IOException {
+           public void write(JsonWriter out, BatchCheckPermissionBody value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -320,12 +255,12 @@ public class RelationshipPatch {
            }
 
            @Override
-           public RelationshipPatch read(JsonReader in) throws IOException {
+           public BatchCheckPermissionBody read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
-             RelationshipPatch instance = thisAdapter.fromJsonTree(jsonObj);
+             BatchCheckPermissionBody instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -352,18 +287,18 @@ public class RelationshipPatch {
   }
 
   /**
-   * Create an instance of RelationshipPatch given an JSON string
+   * Create an instance of BatchCheckPermissionBody given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of RelationshipPatch
-   * @throws IOException if the JSON string is invalid with respect to RelationshipPatch
+   * @return An instance of BatchCheckPermissionBody
+   * @throws IOException if the JSON string is invalid with respect to BatchCheckPermissionBody
    */
-  public static RelationshipPatch fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RelationshipPatch.class);
+  public static BatchCheckPermissionBody fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, BatchCheckPermissionBody.class);
   }
 
   /**
-   * Convert an instance of RelationshipPatch to an JSON string
+   * Convert an instance of BatchCheckPermissionBody to an JSON string
    *
    * @return JSON string
    */

@@ -20,22 +20,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import sh.ory.keto.model.GenericError;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ErrorGeneric
+ * Model tests for CheckPermissionResultWithError
  */
-public class ErrorGenericTest {
-    private final ErrorGeneric model = new ErrorGeneric();
+public class CheckPermissionResultWithErrorTest {
+    private final CheckPermissionResultWithError model = new CheckPermissionResultWithError();
 
     /**
-     * Model tests for ErrorGeneric
+     * Model tests for CheckPermissionResultWithError
      */
     @Test
-    public void testErrorGeneric() {
-        // TODO: test ErrorGeneric
+    public void testCheckPermissionResultWithError() {
+        // TODO: test CheckPermissionResultWithError
+    }
+
+    /**
+     * Test the property 'allowed'
+     */
+    @Test
+    public void allowedTest() {
+        // TODO: test allowed
     }
 
     /**

@@ -19,31 +19,33 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
-import sh.ory.keto.model.GenericError;
+import java.util.List;
+import sh.ory.keto.model.CheckPermissionResultWithError;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ErrorGeneric
+ * Model tests for BatchCheckPermissionResult
  */
-public class ErrorGenericTest {
-    private final ErrorGeneric model = new ErrorGeneric();
+public class BatchCheckPermissionResultTest {
+    private final BatchCheckPermissionResult model = new BatchCheckPermissionResult();
 
     /**
-     * Model tests for ErrorGeneric
+     * Model tests for BatchCheckPermissionResult
      */
     @Test
-    public void testErrorGeneric() {
-        // TODO: test ErrorGeneric
+    public void testBatchCheckPermissionResult() {
+        // TODO: test BatchCheckPermissionResult
     }
 
     /**
-     * Test the property 'error'
+     * Test the property 'results'
      */
     @Test
-    public void errorTest() {
-        // TODO: test error
+    public void resultsTest() {
+        // TODO: test results
     }
 
 }

@@ -21,7 +21,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import sh.ory.keto.model.Relationship;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,108 +47,56 @@ import java.util.Set;
 import sh.ory.keto.JSON;
 
 /**
- * Payload for patching a relationship
+ * Check Permission Result With Error
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-09T17:31:55.351267584Z[Etc/UTC]", comments = "Generator version: 7.7.0")
-public class RelationshipPatch {
-  /**
-   * Gets or Sets action
-   */
-  @JsonAdapter(ActionEnum.Adapter.class)
-  public enum ActionEnum {
-    INSERT("insert"),
-    
-    DELETE("delete");
+public class CheckPermissionResultWithError {
+  public static final String SERIALIZED_NAME_ALLOWED = "allowed";
+  @SerializedName(SERIALIZED_NAME_ALLOWED)
+  private Boolean allowed;
 
-    private String value;
+  public static final String SERIALIZED_NAME_ERROR = "error";
+  @SerializedName(SERIALIZED_NAME_ERROR)
+  private String error;
 
-    ActionEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static ActionEnum fromValue(String value) {
-      for (ActionEnum b : ActionEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<ActionEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final ActionEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public ActionEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return ActionEnum.fromValue(value);
-      }
-    }
-
-    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      String value = jsonElement.getAsString();
-      ActionEnum.fromValue(value);
-    }
+  public CheckPermissionResultWithError() {
   }
 
-  public static final String SERIALIZED_NAME_ACTION = "action";
-  @SerializedName(SERIALIZED_NAME_ACTION)
-  private ActionEnum action;
-
-  public static final String SERIALIZED_NAME_RELATION_TUPLE = "relation_tuple";
-  @SerializedName(SERIALIZED_NAME_RELATION_TUPLE)
-  private Relationship relationTuple;
-
-  public RelationshipPatch() {
-  }
-
-  public RelationshipPatch action(ActionEnum action) {
-    this.action = action;
+  public CheckPermissionResultWithError allowed(Boolean allowed) {
+    this.allowed = allowed;
     return this;
   }
 
   /**
-   * Get action
-   * @return action
+   * whether the relation tuple is allowed
+   * @return allowed
    */
-  @javax.annotation.Nullable
-  public ActionEnum getAction() {
-    return action;
+  @javax.annotation.Nonnull
+  public Boolean getAllowed() {
+    return allowed;
   }
 
-  public void setAction(ActionEnum action) {
-    this.action = action;
+  public void setAllowed(Boolean allowed) {
+    this.allowed = allowed;
   }
 
 
-  public RelationshipPatch relationTuple(Relationship relationTuple) {
-    this.relationTuple = relationTuple;
+  public CheckPermissionResultWithError error(String error) {
+    this.error = error;
     return this;
   }
 
   /**
-   * Get relationTuple
-   * @return relationTuple
+   * any error generated while checking the relation tuple
+   * @return error
    */
   @javax.annotation.Nullable
-  public Relationship getRelationTuple() {
-    return relationTuple;
+  public String getError() {
+    return error;
   }
 
-  public void setRelationTuple(Relationship relationTuple) {
-    this.relationTuple = relationTuple;
+  public void setError(String error) {
+    this.error = error;
   }
 
   /**
@@ -165,9 +112,9 @@ public class RelationshipPatch {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the RelationshipPatch instance itself
+   * @return the CheckPermissionResultWithError instance itself
    */
-  public RelationshipPatch putAdditionalProperty(String key, Object value) {
+  public CheckPermissionResultWithError putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -206,23 +153,23 @@ public class RelationshipPatch {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RelationshipPatch relationshipPatch = (RelationshipPatch) o;
-    return Objects.equals(this.action, relationshipPatch.action) &&
-        Objects.equals(this.relationTuple, relationshipPatch.relationTuple)&&
-        Objects.equals(this.additionalProperties, relationshipPatch.additionalProperties);
+    CheckPermissionResultWithError checkPermissionResultWithError = (CheckPermissionResultWithError) o;
+    return Objects.equals(this.allowed, checkPermissionResultWithError.allowed) &&
+        Objects.equals(this.error, checkPermissionResultWithError.error)&&
+        Objects.equals(this.additionalProperties, checkPermissionResultWithError.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, relationTuple, additionalProperties);
+    return Objects.hash(allowed, error, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RelationshipPatch {\n");
-    sb.append("    action: ").append(toIndentedString(action)).append("\n");
-    sb.append("    relationTuple: ").append(toIndentedString(relationTuple)).append("\n");
+    sb.append("class CheckPermissionResultWithError {\n");
+    sb.append("    allowed: ").append(toIndentedString(allowed)).append("\n");
+    sb.append("    error: ").append(toIndentedString(error)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -246,36 +193,36 @@ public class RelationshipPatch {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("action");
-    openapiFields.add("relation_tuple");
+    openapiFields.add("allowed");
+    openapiFields.add("error");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("allowed");
   }
 
   /**
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to RelationshipPatch
+   * @throws IOException if the JSON Element is invalid with respect to CheckPermissionResultWithError
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!RelationshipPatch.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RelationshipPatch is not found in the empty JSON string", RelationshipPatch.openapiRequiredFields.toString()));
+        if (!CheckPermissionResultWithError.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in CheckPermissionResultWithError is not found in the empty JSON string", CheckPermissionResultWithError.openapiRequiredFields.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CheckPermissionResultWithError.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("action") != null && !jsonObj.get("action").isJsonNull()) && !jsonObj.get("action").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `action` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action").toString()));
-      }
-      // validate the optional field `action`
-      if (jsonObj.get("action") != null && !jsonObj.get("action").isJsonNull()) {
-        ActionEnum.validateJsonElement(jsonObj.get("action"));
-      }
-      // validate the optional field `relation_tuple`
-      if (jsonObj.get("relation_tuple") != null && !jsonObj.get("relation_tuple").isJsonNull()) {
-        Relationship.validateJsonElement(jsonObj.get("relation_tuple"));
+      if ((jsonObj.get("error") != null && !jsonObj.get("error").isJsonNull()) && !jsonObj.get("error").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error").toString()));
       }
   }
 
@@ -283,16 +230,16 @@ public class RelationshipPatch {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RelationshipPatch.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RelationshipPatch' and its subtypes
+       if (!CheckPermissionResultWithError.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CheckPermissionResultWithError' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RelationshipPatch> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RelationshipPatch.class));
+       final TypeAdapter<CheckPermissionResultWithError> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CheckPermissionResultWithError.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<RelationshipPatch>() {
+       return (TypeAdapter<T>) new TypeAdapter<CheckPermissionResultWithError>() {
            @Override
-           public void write(JsonWriter out, RelationshipPatch value) throws IOException {
+           public void write(JsonWriter out, CheckPermissionResultWithError value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -320,12 +267,12 @@ public class RelationshipPatch {
            }
 
            @Override
-           public RelationshipPatch read(JsonReader in) throws IOException {
+           public CheckPermissionResultWithError read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
-             RelationshipPatch instance = thisAdapter.fromJsonTree(jsonObj);
+             CheckPermissionResultWithError instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -352,18 +299,18 @@ public class RelationshipPatch {
   }
 
   /**
-   * Create an instance of RelationshipPatch given an JSON string
+   * Create an instance of CheckPermissionResultWithError given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of RelationshipPatch
-   * @throws IOException if the JSON string is invalid with respect to RelationshipPatch
+   * @return An instance of CheckPermissionResultWithError
+   * @throws IOException if the JSON string is invalid with respect to CheckPermissionResultWithError
    */
-  public static RelationshipPatch fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RelationshipPatch.class);
+  public static CheckPermissionResultWithError fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CheckPermissionResultWithError.class);
   }
 
   /**
-   * Convert an instance of RelationshipPatch to an JSON string
+   * Convert an instance of CheckPermissionResultWithError to an JSON string
    *
    * @return JSON string
    */
